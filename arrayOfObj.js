@@ -7,16 +7,30 @@ const peoplesJobs = [
   },
   {
     name: 'mary',
-    jobTitle: 'barista'
+    jobTitle: 'barista',
+    boss: 'michael'
   },
   {
     name: 'josh',
-    jobTitle: 'saleperson'
+    jobTitle: 'saleperson',
+    boss: 'michael'
   },
   {
     name: 'aspen',
-    jobTitle: 'puppy'
+    jobTitle: 'puppy',
+    boss: 'michael'
   }
 ];
 
-peoplesJobs.forEach (person => console.log(person.name, person.jobTitle));
+peoplesJobs.forEach(person => if ('boss' in person == true) {
+
+ console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}`);
+})
+
+peoplesJobs.forEach(person => if ('boss' in person === false) {
+
+  console.log(`${person.jobTitle} ${preson.name} doesn/'t report to anybody.`);
+
+})
+
+//Trying to add an if statement to check for boss to give two different console.logs.  Having trouble combining the .forEach method with ternary or if/else statements.
