@@ -22,15 +22,16 @@ const peoplesJobs = [
   }
 ];
 
-peoplesJobs.forEach(person => if ('boss' in person == true) {
+peoplesJobs.forEach(function (person){
+  if ('boss' in person == true) {
+    console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}`);
+  }
+});
 
- console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}`);
-})
+peoplesJobs.forEach(function (person){
+  if ('boss' in person === false) {
+    console.log(`${person.jobTitle} ${person.name} doesn't report to anybody.`);
+  }
+});
 
-peoplesJobs.forEach(person => if ('boss' in person === false) {
-
-  console.log(`${person.jobTitle} ${preson.name} doesn/'t report to anybody.`);
-
-})
-
-//Trying to add an if statement to check for boss to give two different console.logs.  Having trouble combining the .forEach method with ternary or if/else statements.
+//Trying to add an if statement to check for boss to give two different console.logs.  Having trouble combining the .forEach method with ternary or if/else statements
