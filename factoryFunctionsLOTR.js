@@ -24,6 +24,6 @@ function createCharacter(name, nickname, race, origin, attack, defence){
   };
 }
 
-const characters = [createCharacter('Gandalf the White', 'gandalf','Wizard', 10, 6)]
+const characters = [createCharacter('Gandalf the White', 'gandalf','Wizard', 10, 6), createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1)]
 
-//still need to check if this works, left off at the 'Using array literal syntax' bullet
+//still need to check if this works, left off at the 'Using array literal syntax' bullet, throwing no errors so I left it for now
